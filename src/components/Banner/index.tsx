@@ -13,8 +13,9 @@ export const Banner = React.memo(() => {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      height={{ base: 500, md: 800 }}
+      height={{ base: '100vh' }}
       overflow="hidden"
+      backgroundColor="white"
     >
       <Flex
         position="relative"
