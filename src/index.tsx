@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { App } from './pages/app';
+import { App } from './pages/home';
 import './index.css';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
