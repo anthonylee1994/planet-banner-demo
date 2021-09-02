@@ -2,6 +2,7 @@
   "name": "planet-banner-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@chakra-ui/react": "^1.6.7",
     "@emotion/react": "^11",
