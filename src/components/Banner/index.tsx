@@ -14,7 +14,6 @@ export const Banner = React.memo(() => {
       alignItems="center"
       flexDirection="column"
       height={{ base: 500, md: 800 }}
-      bgColor="gray.100"
       overflow="hidden"
     >
       <Flex
@@ -25,32 +24,32 @@ export const Banner = React.memo(() => {
         alignItems="center"
       >
         <Logo />
-        <Orbit radius={512 * 1} />
-        <Orbit radius={512 * 1.5} />
-        <Orbit radius={512 * 2} />
+        <Orbit planetColor="#e8bbd2" radius={512 * 1} />
+        <Orbit planetColor="#849cb6" radius={512 * 1.6} />
+        <Orbit planetColor="#92cbd6" radius={512 * 2.4} />
       </Flex>
 
       <Flex position="absolute" bottom={0} width="100%">
         <Wave
-          fill="#bf593a"
+          fill="#ffe7fa"
           paused={false}
           options={{
             height: 20,
-            amplitude: 20 * (amplitude || 1),
+            amplitude: 60 * (amplitude || 1),
             speed: 0.15,
-            points: 20 * (amplitude || 1),
+            points: 4 * (amplitude || 1),
           }}
         />
       </Flex>
       <Flex position="absolute" bottom={0} width="100%">
         <Wave
-          fill="#7b341e"
+          fill="#e1eefe"
           paused={false}
           options={{
             height: 50,
-            amplitude: 20 * (amplitude || 1),
+            amplitude: 40 * (amplitude || 1),
             speed: 0.3,
-            points: 20 * (amplitude || 1),
+            points: 4 * (amplitude || 1),
           }}
         />
       </Flex>

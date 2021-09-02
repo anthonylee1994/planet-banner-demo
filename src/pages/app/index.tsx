@@ -8,18 +8,24 @@ export const App = React.memo(() => {
       <Banner />
       <Flex
         flexDirection="column"
-        bg="orange.800"
+        bg="#e1eefe"
         padding="0 40px 60px"
         d="flex"
         alignItems="center"
-        color="white"
         justifyContent="center"
         width="100%"
       >
-        <Text fontSize={{ base: '3xl', md: '4xl' }} textAlign="center" mb={8}>
+        <Text
+          fontSize={{ base: '3xl', md: '4xl' }}
+          textAlign="center"
+          mt={-8}
+          zIndex={2}
+          mb={8}
+          color="blue.700"
+        >
           What We Do
         </Text>
-        <Text fontSize="md" textAlign="center">
+        <Text fontSize="md" textAlign="center" color="blue.700">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem natus
           magnam culpa repudiandae placeat. Quisquam nisi exercitationem esse,
           voluptatem accusamus ipsa eligendi quae inventore sed expedita id

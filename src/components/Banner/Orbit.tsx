@@ -1,16 +1,15 @@
 import React from 'react';
-import Fly from './assets/fly.svg';
 import { motion } from 'framer-motion';
-import { Circle, Image } from '@chakra-ui/react';
+import { Circle } from '@chakra-ui/react';
 
 interface Props {
   radius: number;
+  planetColor: string;
 }
 
 const MotionCircle = motion(Circle);
-const MotionImage = motion(Image);
 
-export const Orbit = React.memo(({ radius }: Props) => {
+export const Orbit = React.memo(({ radius, planetColor }: Props) => {
   const initialPosition = React.useMemo(() => Math.random() * 360, []);
 
   return (
@@ -29,18 +28,17 @@ export const Orbit = React.memo(({ radius }: Props) => {
         repeat: Infinity,
       }}
     >
-      <MotionImage
-        src={Fly}
+      <MotionCircle
+        bgColor={planetColor}
         width={16}
+        height={16}
         position="absolute"
         transformOrigin="center"
         initial={{
-          rotate: initialPosition,
           x: radius / 2,
           scale: Math.random() * 0.5 + 0.5,
         }}
         animate={{
-          rotate: [initialPosition, initialPosition + 360],
           opacity: [0, 1, 0],
         }}
         transition={{
@@ -49,9 +47,10 @@ export const Orbit = React.memo(({ radius }: Props) => {
           repeat: Infinity,
         }}
       />
-      <MotionImage
-        src={Fly}
+      <MotionCircle
+        bgColor={planetColor}
         width={16}
+        height={16}
         position="absolute"
         transformOrigin="center"
         initial={{
