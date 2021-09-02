@@ -1,19 +1,19 @@
 import React from 'react';
 import { IconButton, Icon } from '@chakra-ui/react';
 import { FaUnlockAlt } from 'react-icons/fa';
-import { useAtom } from 'jotai';
 import {
   loginDrawerVisibleAtom,
   toggleLoginDrawerAtom,
 } from '../../atoms/loginDrawerAtoms';
+import { useAtomValue, useUpdateAtom } from 'jotai/utils';
 
 interface Props {
   alwaysShow?: boolean;
 }
 
 export const LoginButton = React.memo(({ alwaysShow }: Props) => {
-  const [loginDrawerVisible] = useAtom(loginDrawerVisibleAtom);
-  const [, toggleLoginDrawer] = useAtom(toggleLoginDrawerAtom);
+  const loginDrawerVisible = useAtomValue(loginDrawerVisibleAtom);
+  const toggleLoginDrawer = useUpdateAtom(toggleLoginDrawerAtom);
 
   return (
     <IconButton

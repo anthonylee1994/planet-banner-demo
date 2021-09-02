@@ -13,7 +13,7 @@ import {
   Button,
   Link,
 } from '@chakra-ui/react';
-import { useAtom } from 'jotai';
+import { useAtomValue, useUpdateAtom } from 'jotai/utils';
 import {
   closeLoginDrawerAtom,
   loginDrawerVisibleAtom,
@@ -22,8 +22,8 @@ import { LoginButton } from '../LoginButton';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 export const LoginDrawer = React.memo(() => {
-  const [loginDrawerVisible] = useAtom(loginDrawerVisibleAtom);
-  const [, closeLoginDrawer] = useAtom(closeLoginDrawerAtom);
+  const loginDrawerVisible = useAtomValue(loginDrawerVisibleAtom);
+  const closeLoginDrawer = useUpdateAtom(closeLoginDrawerAtom);
 
   return (
     <Drawer
